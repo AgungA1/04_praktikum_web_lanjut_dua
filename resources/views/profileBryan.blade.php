@@ -37,20 +37,20 @@
                        alt="User profile picture">
                 </div>
 
-                <h3 class="profile-username text-center">Bryan Tosin Saputro</h3>
+                <h3 class="profile-username text-center">{{$student->name}}</h3>
 
                 <p class="text-muted text-center">Software Engineer</p>
 
                 
                 <ul class="list-group list-group-unbordered mb-3">
                   <li class="list-group-item">
-                    <b>Kelas</b> <a class="float-right">2G</a>
+                    <b>Tempat Lahir</b> <a class="float-right">{{$student->birthplace}}</a>
                   </li>
                   <li class="list-group-item">
-                    <b>No</b> <a class="float-right">09</a>
+                    <b>Tanggal Lahir</b> <a class="float-right">{{$student->birthday}}</a>
                   </li>
                   <li class="list-group-item">
-                    <b>NIM</b> <a class="float-right">2141720220</a>
+                    <b>Alamat</b> <a class="float-right">{{$student->address}}</a>
                   </li>
                 </ul>
 
@@ -70,25 +70,21 @@
                 <strong><i class="fas fa-book mr-1"></i> Education</strong>
 
                 <p class="text-muted">
-                  State Polytechnic of Malang
+                    {{$student->education}}
                 </p>
 
                 <hr>
 
                 <strong><i class="fas fa-map-marker-alt mr-1"></i> Location</strong>
 
-                <p class="text-muted">Malang, Indonesia</p>
+                <p class="text-muted">{{$student->location}}</p>
 
                 <hr>
 
                 <strong><i class="fas fa-pencil-alt mr-1"></i> Skills</strong>
 
                 <p class="text-muted">
-                  <span class="tag tag-danger">UI Design</span>
-                  <span class="tag tag-success">Coding</span>
-                  <span class="tag tag-info">Javascript</span>
-                  <span class="tag tag-warning">PHP</span>
-                  <span class="tag tag-primary">Node.js</span>
+                  <span class="tag tag-danger">{{$student->skills}}</span>
                 </p>
 
                 <hr>
