@@ -40,23 +40,25 @@
                             <tr class="text-center">
                                 <th>No</th>
                                 <th>Nama</th>
+                                <th>Tanggal Lahir</th>
                                 <th>Alamat</th>
                                 <th>Education</th>
 
                             </tr>
                         </thead>
-                        {{-- <tbody>
+                        <tbody>
 
-                            @foreach ($data as $item)
+                            @foreach ($student as $item)
                                 <tr class="text-center">
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $item['nama'] }}</td>
-                                    <td>{{ $item['alamat'] }}</td>
+                                    <td>{{ $item['name'] }}</td>
+                                    <td>{{ $item['birthday'] }}</td>
+                                    <td>{{ $item['address'] }}</td>
                                     <td>{{ $item['education'] }}</td>
                                 </tr>
                             @endforeach
 
-                        </tbody> --}}
+                        </tbody>
                     </table>
                 </div>
             </div>

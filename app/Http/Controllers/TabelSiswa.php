@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Student;
 use Illuminate\Http\Request;
 
 class TabelSiswa extends Controller
@@ -13,7 +14,8 @@ class TabelSiswa extends Controller
      */
     public function index()
     {
-        return view('tabelSiswa');
+        $student = Student::all();
+        return view('tabelSiswa', compact(['student']));
     }
 
     /**
