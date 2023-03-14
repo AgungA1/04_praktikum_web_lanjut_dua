@@ -37,7 +37,7 @@
                        alt="User profile picture">
                 </div>
 
-                <h3 class="profile-username text-center">{{$student->birthplace}}</h3>
+                <h3 class="profile-username text-center">{{$student->name}}</h3>
 
                 <p class="text-muted text-center">CEO</p>
 
