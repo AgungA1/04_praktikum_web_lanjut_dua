@@ -1,8 +1,11 @@
 <?php
 
 namespace Database\Factories;
-// use Faker\Factory as faker;
+
+use App\Models\Student;
+use Faker\Generator as Faker;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Student>
@@ -14,18 +17,22 @@ class StudentFactory extends Factory
      *
      * @return array<string, mixed>
      */
+
+    protected $model = Student::class;
     public function definition()
     {
         // $faker = faker::create();
+        $name = $this->faker->name;
+        $slug = Str::slug($name);
         return [
-            'name' => fake()->name(),
-            'birthplace' => fake()->city(),
-            'birthday' => fake()->date($format = 'd-m-y', $max = '2022',$min = '1980'),
-            'address' =>fake()->city(),
-            'education' =>fake()->company(),
-            'location' =>fake()->streetAddress(),
-            'skills' =>fake()->words(2),
-            'slug' =>fake()->slug(),
+            'name' => $name,
+            'birthplace' => $this->faker->city,
+            'birthday' => $this->faker->date,
+            'address' =>$this->faker->city,
+            'education' =>$this->faker->company,
+            'location' =>$this->faker->streetAddress,
+            'skills' =>$this->faker->word,
+            'slug' =>$slug
         ];
     }
 }

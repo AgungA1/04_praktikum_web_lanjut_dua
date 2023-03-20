@@ -54,7 +54,7 @@
                                     <a href="#" class="btn btn-sm bg-teal">
                                         <i class="fas fa-comments"></i>
                                     </a>
-                                    <a href="{{Route('profile', ['id'=>'agung'])}}" class="btn btn-sm btn-primary">
+                                    <a href="{{Route('profile', ['slug'=>'agung'])}}" class="btn btn-sm btn-primary">
                                         <i class="fas fa-user"></i> View Profile
                                     </a>
                                 </div>
@@ -86,7 +86,7 @@
                                         <a href="#" class="btn btn-sm bg-teal">
                                             <i class="fas fa-comments"></i>
                                         </a>
-                                        <a href="{{Route('profile', ['id'=>'agung'])}}" class="btn btn-sm btn-primary">
+                                        <a href="{{Route('profile', ['slug'=>'agung'])}}" class="btn btn-sm btn-primary">
                                             <i class="fas fa-user"></i> View Profile
                                         </a>
                                     </div>
@@ -96,7 +96,7 @@
                     </div>
                 </div>
             </div>
-                             
+
             <!-- /.card-body -->
         </div>
         <!-- /.card -->

@@ -18,7 +18,7 @@ class StudentSeeder extends Seeder
     //     $data = [[
     //         'name' => 'Agung Malik Al Qindy',
     //         'birthplace' => 'Bondowoso',
-    //         'birthday' => '24-07-2003',
+    //         'birthday' => '2003-07-24',
     //         'address' => 'Wonosari',
     //         'education' => 'Politeknik Negeri Malang',
     //         'location' => 'Malang, Jawa Timur',
@@ -28,7 +28,7 @@ class StudentSeeder extends Seeder
     //     [
     //         'name' => 'Bryan Tosin Saputro',
     //         'birthplace' => 'Malang',
-    //         'birthday' => '03-10-2002',
+    //         'birthday' => '2002-10-03',
     //         'address' => 'Jl.Martorejo',
     //         'education' => 'Politeknik Negeri Malang',
     //         'location' => 'Malang, Jawa Timur',
@@ -38,6 +38,6 @@ class StudentSeeder extends Seeder
     // ];
     //     DB::table('students')->insert($data);
 
-        Student::factory()->count(5)->create();
+        
     }
 }
