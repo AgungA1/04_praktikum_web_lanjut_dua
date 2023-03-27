@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Layout;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [App\Http\Controllers\DashboardController::class, 'redirect']);
+Route::get('/', [App\Http\Controllers\HomeController::class, 'redirect']);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 
@@ -27,3 +30,6 @@ Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index'])
 Route::get('/sweet', [App\Http\Controllers\SweetController::class, 'index']);
 
 Route::get('/data',[App\Http\Controllers\TabelSiswa::class,'index'])->name('tabelSiswa');
+
+Auth::routes();
+
